@@ -8,22 +8,22 @@ import { Loader2 } from "lucide-react";
 const initialState = {
   message: '',
 }
-type SignUpProps = {
+type SignInProps = {
   action: (prevState: any, formData: FormData) => Promise<{message: string} |undefined>;
 }
 
-function SignUp({action}: SignUpProps) {
+function SignIn({action}: SignInProps) {
   const [state, formAction, isPending] = useActionState(action, initialState)
   return (
     <Form action={formAction} className="max-w-md mx-auto p-8 my-16 bg-white rounded-lg shadow-md">
         <h1 className="text-2xl font-bold text-center  mb-2 ">
-          Join the DEAL Revolution
+        Welcome back
         </h1>
         <p className="text-center text-sm text-rose-600 font-semibold mb-2">
-        🔥LIMITED TIME OFFER🔥
+        🔥MEMBER EXCLUSIVE🔥
         </p>
         <p className="text-center text-sm text-gray-600 mb-4">
-          Sign up now and get 90% OFF your first order!
+          Sign in to access your exclusive member deals!
         </p>
 
         <div className="space-y-6">
@@ -57,8 +57,8 @@ function SignUp({action}: SignUpProps) {
           </div>
           {/* Copywriting */}
           <div className="text-center">
-            <p className="text-xs text-gray-500 mb-2 "> ⚡Only 127 welcome bonus packages remaining</p>
-            <p className="text-xs text-gray-500 mb-2 "> 🕙Offer expires in 13:45</p>
+            <p className="text-xs text-gray-500 mb-2 "> ⚡Members save an extra 15% on all orders</p>
+            <p className="text-xs text-gray-500 mb-2 "> 📦Plus get free shipping on orders over $15.00</p>
           </div>
           {/* Submit button*/}
           <button 
@@ -68,18 +68,18 @@ function SignUp({action}: SignUpProps) {
             
             {isPending ? (<>
               <Loader2 className="h-4 w-4 animate-spin"/>
-              Creating account...
-            </>) : ('CREATE ACCOUNT') }
+              SIGNIN IN...
+            </>) : ('SIGN IN') }
           </button>
-          {state?.message &&  state?.message.length > 0 && (
+
+            {state?.message &&  state?.message.length > 0 && (
               <p className="text-center  text-sm text-red-600">
                 {state?.message}
               </p>
             )}
-
         </div>
     </Form>
   )
 }
 
-export default SignUp
+export default SignIn

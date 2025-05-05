@@ -4,9 +4,10 @@ import { User } from '@/generated/prisma'
 import { log } from 'console'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const AnnouncementBar = ()=> {
+
+const AnnouncementBar = ()=> {   
     return(
         <div className='w-full bg-black py-2'>
             <div className='container mx-auto flex items-center justify-center px-8'>
@@ -18,7 +19,7 @@ const AnnouncementBar = ()=> {
     )
 }
 type HeaderProps = {
-    user: Omit<User,"passwordHash"> | null;
+    user: Omit<User, 'passwordHash'> | null;
 }
 const Header = ({user}: HeaderProps) => {
      const [isOpen, setIsOpen] = useState<boolean>(true);
