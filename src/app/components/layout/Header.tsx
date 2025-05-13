@@ -78,7 +78,7 @@ const Header = ({user}: HeaderProps) => {
                     </svg>
                     
                     </button>
-
+                    
                     {user? (
                         <div className='flex items-center gap-2 sm:gap-4'>
                             <span className='text-sm sm:text-sm text-gray-700 md:hidden block'>
