@@ -128,7 +128,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\FrenyLoo\\Documents\\Training\\ecomm-app\\src\\generated\\prisma",
+      "value": "C:\\Users\\Freny Loo\\Documents\\Projects\\ecomm-app\\bootleg-temu-app\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -142,7 +142,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\FrenyLoo\\Documents\\Training\\ecomm-app\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\Freny Loo\\Documents\\Projects\\ecomm-app\\bootleg-temu-app\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

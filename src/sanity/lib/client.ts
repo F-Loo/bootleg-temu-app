@@ -2,7 +2,7 @@ import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId } from '../env'
 import { sanityFetch } from './live'
-import { Product } from '@/sanity.types'
+import { Product, ProductCategory } from '@/sanity.types'
 
 export const client = createClient({
   projectId,
@@ -17,3 +17,8 @@ export const getAllProducts = async () => {
   return products.data as Product[];
 }
 
+export const getAllCategories = async () => {
+  const query = `*[_type == "productCategory"]`
+  const categories = await sanityFetch({query:query})
+  return categories.data as ProductCategory[];
+}
